@@ -1,0 +1,38 @@
+
+
+Nome : "W Private races"  
+
+
+
+Sistema: 
+
+
+Cadastro / login / sempre que estier logado dizer disponibilidade 
+
+
+cobrança por km /
+
+Winicius 
+
+Horario / dia / disponibilidade de horario
+
+
+integração com google maps / caminho mais rapido 
+
+
+"disponivel ou indisponivel" 
+
+
+limitador de horario / tempo percorrido / dez minutos de acrecimo 
+
+Winicius
+
+
+valor /  forma de pagamento / finalizar pagamentos 
+
+
+
+
+
+
+

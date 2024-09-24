@@ -1,0 +1,145 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #282a36;
+    color: #f8f8f2;
+  }
+   
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+   
+   
+  #menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #666;
+  }
+   
+  #menu li {
+    padding: 20px 30px; /* Aumenta o padding para deixar os itens mais largos /
+  }
+   
+  #menu li:first-child {
+    margin-right: auto; / Empurra o primeiro item para a esquerda */
+  }
+   
+  #menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+  }
+   
+  #menu li a:hover {
+    background-color: #444;
+    border-bottom-color: #fff;
+  }
+   
+  header {
+    background-color: #44475a;
+    color: #c9f993;
+    padding: 10px;
+    text-align: center;
+  }
+   
+  section {
+    padding: 20px;
+  }
+   
+  /* Estilos para formulários */
+  form {
+    margin-bottom: 20px;
+    background-color: #282a36;
+    padding: 20px;
+    border-radius: 5px;
+  }
+   
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #6272a4;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #44475a;
+    color: #f8f8f2;
+  }
+   
+  input[type="submit"] {
+    background-color: #bd93f9;
+    color: #282a36;
+    cursor: pointer;
+  }
+   
+  input[type="submit"]:hover {
+    background-color: #ff79c6;
+  }
+   
+  /* Estilos para tabela de produtos */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+   
+  th, td {
+    border: 1px solid #44475a;
+    padding: 8px;
+    text-align: left;
+  }
+   
+  th {
+    background-color: #44475a;
+    color: #f8f8f2;
+  }
+   
+  /* Estilos para notificações de estoque baixo */
+  #estoqueBaixo {
+    color: #ff5555;
+    font-weight: bold;
+  }
+   
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+   
+  li {
+    background-color: #44475a;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+   
+  li:hover {
+    background-color: #6272a4;
+  }
+   
+  .delete-btn {
+    background-color: #ff5555;
+    color: #f8f8f2;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+   
+  .delete-btn:hover {
+    background-color: #ff79c6;
+  }

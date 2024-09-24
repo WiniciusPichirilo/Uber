@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W Private Races - Login e Criação de Conta</title>
+    
+    <!-- Fonts and CSS Links -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #282a36; /* Dracula background color */
+            color: #f8f8f2; /* Dracula text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #44475a; /* Dracula header color */
+            padding: 10px 0;
+            color: #f8f8f2;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f8f8f2;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .banner {
+            width: 65%;
+            height: 50vh;
+            background: url('segurança.jpg') no-repeat center center/cover;
+        }
+
+        .container {
+            background-color: #44475a; /* Dracula container color */
+            color: #f8f8f2; /* Dracula text color */
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            margin-left: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container input[type="text"],
+        .container input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #6272a4; /* Dracula border color */
+            border-radius: 4px;
+            background-color: #282a36; /* Dracula input background color */
+            color: #f8f8f2; /* Dracula input text color */
+        }
+
+        .container button {
+            padding: 10px;
+            background-color: #50fa7b; /* Dracula button color */
+            color: #282a36;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #1eac3a; /* Darker green for button hover */
+        }
+
+        .message {
+            margin-top: 10px;
+            color: #ff5555; /* Dracula error color */
+        }
+
+        footer {
+            background-color: #44475a; /* Dracula footer color */
+            color: #f8f8f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        footer .social a {
+            color: #f8f8f2;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .social a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>W Private Races</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="disponibilidade.html">Agendamento de Viagem</a></li>
+                <li><a href="quem_somos.html">Quem Somos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content with Banner and Login -->
+    <div class="main-content">
+        <!-- Banner on the Left -->
+        <div class="banner"></div>
+
+        <!-- Login and Registration on the Right -->
+        <div class="container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Login</button>
+                <div class="message" id="login-message"></div>
+            </form>
+
+            <h2>Criar Conta</h2>
+            <form id="register-form">
+                <input type="text" id="reg-username" placeholder="Novo Usuário" required>
+                <input type="password" id="reg-password" placeholder="Nova Senha" required>
+                <button type="submit">Criar Conta</button>
+                <div class="message" id="register-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>W Private Races &copy; 2024</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var messageElement = document.getElementById('login-message');
+            
+            // Simulação de login
+            if (username === 'admin' && password === 'admin') {
+                messageElement.textContent = 'Login bem-sucedido!';
+                messageElement.style.color = '#50fa7b'; /* Dracula success color */
+            } else {
+                messageElement.textContent = 'Usuário ou senha incorretos.';
+                messageElement.style.color = '#ff5555'; /* Dracula error color */
+            }
+        });
+
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var regUsername = document.getElementById('reg-username').value;
+            var regPassword = document.getElementById('reg-password').value;
+            var messageElement = document.getElementById('register-message');
+            
+            // Simulação de criação de conta
+            if (regUsername && regPassword) {
+                messageElement.textContent = 'Conta criada com sucesso!';
+                messageElement.style.color = '#50fa7b'; /* Dracula success color */
+            } else {
+                messageElement.textContent = 'Por favor, preencha todos os campos.';
+                messageElement.style.color = '#ff5555'; /* Dracula error color */
+            }
+        });
+    </script>
+</body>
+</html>
